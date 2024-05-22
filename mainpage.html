@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page - My Portfolio</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #fde4ef;
+            color: #333;
+        }
+        .brand-logo {
+            color: white;
+            font-size: 24px;
+        }
+        .profile-container img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .profile-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .comment-section textarea {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+        .footer {
+            background-color: #ff6392;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .quarter-section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        h2, h3, p {
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand brand-logo" href="#">My Portfolio</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#profile">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#quarter1">First Quarter</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#quarter2">Second Quarter</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#quarter3">Third Quarter</a>
+                    </li>
+                </ul>
+                <form class="form-inline ml-auto">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div id="profile" class="container mt-5">
+        <div class="profile-container">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/002/318/271/small/user-profile-icon-free-vector.jpg" alt="Profile Image">
+            <h2 class="mb-3">Noryasmin Calaca</h2>
+            <p class="mb-4">9-Topaz</p>
+            <p>Welcome to my online portfolio. This is a showcase of the projects I completed during the 2023-2024 school year. Each project highlights the skills and creativity I developed as I grew both academically and professionally.</p>
+        </div>
+    </div>
+
+    <div id="quarter1" class="container mt-5 quarter-section">
+        <h3 class="text-center mb-4">First Quarter Projects</h3>
+        <iframe src="GH_ICT9Topaz_Q1PROJECT_Calaca_Noryasmin.html" style="width: 100%; height: 400px;" frameborder="0"></iframe>
+    </div>
+    <div id="quarter2" class="container mt-5 quarter-section">
+        <h3 class="text-center mb-4">Second Quarter Projects</h3>
+        <iframe src="ICT9Topaz_Q2Project_Calaca_Noryasmin.html" style="width: 100%; height: 400px;" frameborder="0"></iframe>
+    </div>
+    <div id="quarter3" class="container mt-5 quarter-section">
+        <h3 class="text-center mb-4">Third Quarter Projects</h3>
+        <iframe src="index copy.html" style="width: 100%; height: 400px;" frameborder="0"></iframe>
+    </div>
+    
+    <div class="container mt-5 comment-section">
+        <h3 class="text-center mb-4">Comments/Suggestions</h3>
+        <textarea class="form-control mb-3" id="comment" placeholder="Write your comments/suggestions here..."></textarea>
+        <button type="button" class="btn btn-primary btn-block" onclick="submitComment()">Submit</button>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <p>&copy; 2024 All rights reserved.</p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function submitComment() {
+            var comment = document.getElementById('comment').value;
+            if (comment.trim()) {
+                alert("Thank you for your comment/suggestion!");
+                document.getElementById('comment').value = '';
+            } else {
+                alert("Please enter a comment.");
+            }
+        }
+    </script>
+</body>
+</html>

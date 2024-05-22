@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #fde4ef;
+            color: #333;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url('https://i.pinimg.com/originals/5c/43/d2/5c43d280ddfbd4a1b4c571874e699f8d.gif');
+            background-size: cover;
+        }
+
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.8); 
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            width: 300px;
+        }
+
+        input[type="email"], input[type="password"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            cursor: pointer;
+            padding: 10px 20px;
+            border: none;
+            background-color: #ff6392;
+            color: white;
+            border-radius: 5px;
+            width: 100%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        button:hover {
+            background-color: #e05384;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+        <form id="loginForm">
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <input type="password" id="password" placeholder="Enter your password" required>
+            <button type="button" onclick="checkLogin()">Login</button>
+            <button type="button" onclick="resetForm()">Cancel</button>
+        </form>
+    </div>
+
+    <script>
+        function checkLogin() {
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+
+            if (email && password) { 
+                alert('Login Successful!');
+                window.location.href = 'mainpage.html'
+            } else {
+                alert('Please enter both email and password.')
+            }
+        }
+
+        function resetForm() {
+            document.getElementById('loginForm').reset()
+        }
+    </script>
+</body>
+</html>
